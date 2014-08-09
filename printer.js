@@ -104,4 +104,4 @@ printer.print = function(num) {
 	//this.printThreeDigitNumber(123)
 }
 
-printer.print(123459812)
+printer.print(1000)
