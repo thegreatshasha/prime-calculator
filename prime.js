@@ -1,40 +1,36 @@
-//Make a node.js project in coffeescript with export and stuff
-var printer = require("./printer")
-
-var sieve = {}
-
-// The theoretical bound on number of integers necessary to generate n primes
-sieve.upperBound = function(num) {
-	return parseInt(num*(Math.log(num)+Math.log(Math.log(num))));
-}
-
-sieve.composites = {}
-
-sieve.currentPrime = 1
-
-sieve.primes = [2]
-
-sieve.calculate = function() {
-	var max = sieve.upperBound(1000)
-	var count = 1;
+module.exports = function(){
 	
-	while(count<1000) {
-		sieve.currentPrime += 2;
-	
-		if(!sieve.composites[sieve.currentPrime]){
-			count += 1;
-			sieve.primes.push(sieve.currentPrime)
-		
-			for(var i = sieve.currentPrime; i<= max; i += 2*sieve.currentPrime) {
-				sieve.composites[i] = true
-			}
-		}
-		
-		
+	// The theoretical bound on number of integers necessary to generate n primes
+	this.upperBound = function(num) {
+		return parseInt(num*(Math.log(num)+Math.log(Math.log(num))));
 	}
-	
-	printer.print(sieve.primes)
-	
-}
 
-sieve.calculate()
+	this.composites = {}
+
+	this.currentPrime = 1
+
+	this.primes = [2]
+
+	this.calculate = function(numOfPrimes) {
+		var max = this.upperBound(numOfPrimes)
+		var count = 1;
+	
+		while(count<1000) {
+			this.currentPrime += 2;
+	
+			if(!this.composites[this.currentPrime]){
+				count += 1;
+				this.primes.push(this.currentPrime)
+		
+				for(var i = this.currentPrime; i<= max; i += 2*this.currentPrime) {
+					this.composites[i] = true
+				}
+			}
+		
+		
+		}
+	
+		return this.primes
+	
+	}
+}
