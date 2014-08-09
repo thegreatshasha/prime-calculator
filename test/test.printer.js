@@ -8,11 +8,12 @@ before(function(){
   this.hashes = {
     2: "two ",
     3: "three ",
-    1000: "one thousand",
+    1001: "one thousand, one ",
     1000001: "one million, one ",
     10045: "ten thousand, forty five ",
     100112013145: "one hundred billion, one hundred twelve million, thirteen thousand, one hundred and forty five "
   }
+  
 })
 
 suite('Prime Calculator', function() {
