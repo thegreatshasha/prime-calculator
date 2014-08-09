@@ -6,7 +6,12 @@ before(function(){
   this.printer = new numToWordsPrinter()
   
   this.hashes = {
-    10045: "ten thousand and forty five"
+    2: "two ",
+    3: "three ",
+    1000: "one thousand",
+    1000001: "one million, one ",
+    10045: "ten thousand, forty five ",
+    100112013145: "one hundred billion, one hundred twelve million, thirteen thousand, one hundred and forty five "
   }
 })
 
