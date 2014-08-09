@@ -83,7 +83,7 @@ module.exports = function() {
 		
 		// Finally if facevalue passed as argument
 		if(faceValue && parseInt(numArray.join("")))
-			console.log(this.getFaceValue(faceValue))
+			this.log(this.getFaceValue(faceValue)+",")
 	}
 
 	this.print = function(num) {
