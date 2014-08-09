@@ -49,7 +49,7 @@ printer.getFaceValue = function(facenum) {
 
 printer.log = function(text) {
 	if(text)
-		console.log(text)
+		process.stdout.write(text + " ")
 }
 
 printer.printThreeDigitNumber = function(numArray, faceValue) {
@@ -81,7 +81,7 @@ printer.printThreeDigitNumber = function(numArray, faceValue) {
 	}
 	
 	// Finally if facevalue passed as argument
-	if(faceValue)
+	if(faceValue && parseInt(numArray.join()))
 		console.log(printer.getFaceValue(faceValue))
 }
 
@@ -104,4 +104,4 @@ printer.print = function(num) {
 	//this.printThreeDigitNumber(123)
 }
 
-printer.print(1000)
+printer.print(1000002)
