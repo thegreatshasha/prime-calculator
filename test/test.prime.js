@@ -22,8 +22,6 @@ suite('Prime Calculator', function() {
     var pc = new primeCalculator()
     var primes = pc.calculate(1000)
     
-    console.log(primes)
-    
     for(var i=0; i<primes.length; i++) {
       var prime = primes[i];
       
