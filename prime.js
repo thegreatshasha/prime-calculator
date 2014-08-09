@@ -15,7 +15,7 @@ module.exports = function(){
 		var max = this.upperBound(numOfPrimes)
 		var count = 1;
 	
-		while(count<1000) {
+		while(count<numOfPrimes) {
 			this.currentPrime += 2;
 	
 			if(!this.composites[this.currentPrime]){

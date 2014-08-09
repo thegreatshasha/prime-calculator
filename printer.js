@@ -1,4 +1,5 @@
 module.exports = function() {
+	
 	this.rules = {
 		1: "one",
 		2: "two",
@@ -18,7 +19,7 @@ module.exports = function() {
 		16: "sixteen",
 		17: "seventeen",
 		18: "eighteen",
-		19: "ninetenn",
+		19: "nineteen",
 		20: "twenty",
 		30: "thirty",
 		40: "forty",
@@ -52,6 +53,7 @@ module.exports = function() {
 	}
 
 	this.printThreeDigitNumber = function(numArray, faceValue) {
+		
 		var units = numArray[numArray.length - 1]
 		var tenth = numArray[numArray.length - 2]
 		var lastTwo = numArray[numArray.length - 2] + numArray[numArray.length - 1];
@@ -85,10 +87,13 @@ module.exports = function() {
 	}
 
 	this.print = function(num) {
+		
 		var numArray = num.toString().split("")
-		//console.log(numArray)
 		var start = 0
 		var numlen = (numArray.length % 3) || 3
+		
+		if(numArray.length == 1)
+			this.log(this.getRule(numArray[0]))
 	
 		while(start < numArray.length - 1) {
 		

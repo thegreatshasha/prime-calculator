@@ -4,5 +4,11 @@ var primeCalculator = require('./prime')
 var pp = new numToWordsPrinter()
 var primec = new primeCalculator()
 
-var primes = primec.calculate(1000)
-console.log(primes)
+var numOfPrimes = process.argv.slice(2)[0];
+
+var primes = primec.calculate(numOfPrimes)
+
+for(var i=0; i<primes.length; i++){
+	pp.print(primes[i])
+	console.log("\n===============================")
+}
