@@ -1,5 +1,5 @@
 ## Prime Calculator
-A tool to calculate the first n prime numbers and print them in words
+A fast tool to calculate the first n prime numbers and print them in words
 
 ## Usage
 You need to install node.js
