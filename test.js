@@ -1,5 +1,5 @@
-var numToWordsPrinter = require('./printer')
-var primeCalculator = require('./prime')
+var numToWordsPrinter = require('./lib/printer')
+var primeCalculator = require('./lib/prime')
 
 var pp = new numToWordsPrinter()
 var primec = new primeCalculator()
